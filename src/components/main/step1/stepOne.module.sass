@@ -1,0 +1,277 @@
+@import "../../../styles/_variables"
+@import "../../../styles/_mixins"
+
+@keyframes animateTitle
+    0%
+        width: 0
+    100%
+        width: 100%
+
+.stepOne
+    position: relative
+    height: 100%
+    width: 100%
+    &::before
+        content: ""
+        position: absolute
+        background: url("../../../assets/images/background-10.avif")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        height: 100%
+        width: 100%
+        filter: brightness(40%) saturate(150%)
+        z-index: -1
+
+    > svg
+        color: $white
+        font-size: 2rem
+        position: absolute
+        left: 24px
+        top: 26px
+
+    .logoIcon
+        path
+            fill: $white
+    .stepOneTextWrapper
+        height: 100%
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        .scrollDownIcon
+            position: absolute
+            display: flex
+            align-items: center
+            flex-flow: row nowrap
+            right: 30px
+            bottom: 30px
+            cursor: pointer
+            svg
+                color: $green
+            p
+                font-family: $FontFamily
+                text-transform: uppercase
+                padding: 0 0 0 10px
+                color: $white
+        .textWrapper
+            user-select: none
+            > span
+                color: $gray
+                font-family: "montserrat-medium", sans-serif
+                font-size: 0.9rem
+                display: flex
+                justify-content: center
+            h3
+                color: $white
+                font-family: "montserrat-medium", sans-serif
+                animation: animateTitle 2s ease-in-out
+                overflow: hidden
+                font-size: 1.5rem
+                margin: 0.1rem 0 0
+                white-space: nowrap
+
+    .btnWrapper
+        display: flex
+        flex-direction: column
+
+        button
+            display: inline-block
+            font-family: "montserrat-medium", sans-serif
+            font-size: 1.2rem
+            text-transform: uppercase
+            height: 5.4rem
+            line-height: calc(5.4rem - .4rem)
+            padding: 0 1rem
+            text-decoration: none
+            text-align: center
+            white-space: nowrap
+            cursor: pointer
+            background-color: transparent
+            border: 0.2rem solid $gray
+            border-color: $white
+            color: $white
+            margin: 1.5rem 0
+            letter-spacing: .25rem
+            -webkit-transition: all 0.5s ease-in-out
+            transition: all 0.5s ease-in-out
+            &:hover
+                border-color: $green
+
+@media screen and (min-width: $XS)
+    .stepOne
+        position: relative
+        height: 100%
+        width: 100%
+        &::before
+            content: ""
+            position: absolute
+            background: url("../../../assets/images/background-10.avif")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            height: 100%
+            width: 100%
+            filter: brightness(40%) saturate(150%)
+            z-index: -1
+        > svg
+            color: $white
+            font-size: 2rem
+
+        .logoIcon
+            path
+                fill: $white
+        .stepOneTextWrapper
+            height: 100%
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            .textWrapper
+                user-select: none
+                > span
+                    color: $gray
+                    font-family: "montserrat-medium", sans-serif
+                    font-size: 0.9rem
+                    display: flex
+                    justify-content: center
+                h3
+                    color: $white
+                    font-family: "montserrat-medium", sans-serif
+                    animation: animateTitle 2s ease-in-out
+                    overflow: hidden
+                    font-size: 1.5rem
+                    margin: 0.1rem 0 0
+                    white-space: nowrap
+                    @media screen and (max-width: 370px)
+                        font-size: 1rem
+
+        .btnWrapper
+            display: flex
+            flex-direction: column
+
+            button
+                display: inline-block
+                font-family: "montserrat-medium", sans-serif
+                font-size: 1.2rem
+                text-transform: uppercase
+                height: 5.4rem
+                line-height: calc(5.4rem - .4rem)
+                padding: 0 0.5rem
+                text-decoration: none
+                text-align: center
+                white-space: nowrap
+                cursor: pointer
+                background-color: transparent
+                border: 0.2rem solid $gray
+                border-color: $white
+                color: $white
+                margin: 1.5rem 0
+                letter-spacing: .25rem
+                -webkit-transition: all 0.5s ease-in-out
+                transition: all 0.5s ease-in-out
+                &:hover
+                    border-color: $green
+
+@media screen and (min-width: $L)
+    .stepOne
+        &::before
+            > svg
+
+        .logoIcon
+            path
+        .stepOneTextWrapper
+
+            .textWrapper
+                > span
+                    font-size: 1.3rem
+                    justify-content: flex-start
+                h3
+                    font-size: 2.5rem
+
+        .btnWrapper
+            flex-direction: row
+            button
+                width: 100%
+                font-size: 0.8rem
+                padding: 0 0.2rem
+                margin: 1.5rem 1.5rem 0 0
+
+@media screen and (min-width: $X)
+    .stepOne
+        &::before
+            > svg
+
+        .logoIcon
+            path
+        .stepOneTextWrapper
+
+            .textWrapper
+                > span
+                    font-size: 1.3rem
+                h3
+                    font-size: 2.5rem
+
+        .btnWrapper
+            button
+                font-size: 0.8rem
+                padding: 0 0.2rem
+
+@media screen and (min-width: $XL)
+    .stepOne
+        &::before
+            > svg
+
+        .logoIcon
+            path
+        .stepOneTextWrapper
+
+            .textWrapper
+                > span
+                    font-size: 1.3rem
+                h3
+                    font-size: 3.5rem
+
+        .btnWrapper
+            button
+                width: 250px
+                font-size: 1rem
+
+@media screen and (min-width: $XXL)
+    .stepOne
+        &::before
+            > svg
+
+                color: $white
+                font-size: 2rem
+                margin: 24px 38px
+
+        .logoIcon
+            path
+        .stepOneTextWrapper
+
+            .textWrapper
+                > span
+                    color: $gray
+                    font-family: $FontFamily
+                    font-size: 1.6rem
+                h3
+                    font-size: 4.5rem
+
+        .btnWrapper
+            display: flex
+            button
+                font-size: 1.2rem
+                height: 5.4rem
+                line-height: calc(5.4rem - .4rem)
+                padding: 0 3rem
+                width: 300px
+                border-color: $white
+                color: $white
+                margin: 1.5rem 1.5rem 0 0
+                letter-spacing: .25rem
+
+                &:hover
+                    border-color: $green
