@@ -1,12 +1,29 @@
+import { useRef, useEffect } from "react";
 import SocialIcons from "../socialIcons/SocialIcons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
 import classes from "./stepOne.module.sass";
 
-const StepOne = ({ nextPage }: { nextPage(): void }) => {
+interface Props {
+  nextPage(): void;
+  activePage: boolean;
+}
+
+const StepOne = ({ nextPage, activePage }: Props) => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (activePage)
+      sectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+  }, [activePage]);
+
+  useEffect(() => {}, []);
+
   return (
-    <div className={classes.stepOne}>
+    <section id="stepOne" ref={sectionRef} className={classes.stepOne}>
       <FontAwesomeIcon icon={faCode} />
       <div className={classes.stepOneTextWrapper}>
         <div className={classes.textWrapper}>
@@ -23,7 +40,7 @@ const StepOne = ({ nextPage }: { nextPage(): void }) => {
         </div>
         <SocialIcons />
       </div>
-    </div>
+    </section>
   );
 };
 

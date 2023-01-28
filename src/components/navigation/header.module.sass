@@ -1,6 +1,6 @@
 @import "../../styles/_variables"
 
-.header
+.navigation
     display: flex
     align-items: center
     justify-content: space-between
@@ -28,6 +28,9 @@
             letter-spacing: .3rem
             color: #39b54a
             cursor: pointer
+            background: $black
+            border-top-right-radius: 5px
+            border-bottom-right-radius: 5px
 
             &:hover
                 p
@@ -50,6 +53,10 @@
                 letter-spacing: .3rem
                 user-select: none
                 transition: all 0.5s ease-in-out
+                background: $black
+
+                border-top-left-radius: 5px
+                border-bottom-left-radius: 5px
 
             span
                 display: block

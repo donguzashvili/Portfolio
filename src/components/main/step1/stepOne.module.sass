@@ -1,11 +1,6 @@
 @import "../../../styles/_variables"
 @import "../../../styles/_mixins"
-
-@keyframes animateTitle
-    0%
-        width: 0
-    100%
-        width: 100%
+@import "../../../styles/_keyframes"
 
 .stepOne
     position: relative
@@ -51,12 +46,14 @@
             svg
                 color: $green
             p
-                font-family: $FontFamily
+                font-family: $fontSemiBold
                 text-transform: uppercase
                 padding: 0 0 0 10px
                 color: $white
         .textWrapper
             user-select: none
+            transition: all 0.3s ease-in-out
+            animation: 1s homeMainTextTransition
             > span
                 color: $gray
                 font-family: "montserrat-medium", sans-serif
@@ -255,7 +252,7 @@
             .textWrapper
                 > span
                     color: $gray
-                    font-family: $FontFamily
+                    font-family: $fontMedium
                     font-size: 1.6rem
                 h3
                     font-size: 4.5rem

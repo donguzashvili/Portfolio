@@ -1,0 +1,82 @@
+@import "../../../styles/_variables"
+
+.stepTwo
+    height: 100%
+    width: 100%
+    background-color: $green
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .wrapper
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 800px
+
+        .head
+            position: relative
+            padding: 0 0 50px
+            &::before
+                content: ""
+                display: inline-block
+                height: 1px
+                width: 550px
+                background-color: rgba(255, 255, 255, 0.25)
+                position: absolute
+                bottom: 0
+                left: 50%
+                -webkit-transform: translateX(-50%)
+                -ms-transform: translateX(-50%)
+                transform: translateX(-50%)
+            p
+                color: $black
+                font-size: 1.7rem
+                font-family: $fontMedium
+                font-weight: bold
+                text-align: center
+            h3
+                font-family: $fontMedium
+                color: $white
+                font-size: 4rem
+                text-align: center
+
+                span
+            h5
+                font-family: $fontMedium
+                color: $black
+                font-size: 2.5rem
+                text-align: center
+
+        .body
+            padding: 30px 0 0
+            p
+                font-family: $fontMedium
+                font-size: 1.3rem
+                color: $black
+                line-height: 26px
+                text-align: center
+
+        .footer
+            width: 100%
+            padding: 30px 0 0
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+
+            p
+                color: $white
+                font-size: 3rem
+                font-weight: bold
+                font-family: $fontSemiBold
+            h5
+                font-family: $fontSemiBold
+                font-size: 1.5rem
+                text-transform: capitalize
+
+            div
+                text-align: center
+                padding: 0 10px
+                &:not(:last-child)
+                    border-right: 1px solid rgba(255, 255, 255, 0.25)
