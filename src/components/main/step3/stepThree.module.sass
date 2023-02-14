@@ -1,0 +1,173 @@
+@import "../../../styles/_variables"
+
+.stepThree
+    height: 100%
+    width: 100%
+
+    .wrapper
+        max-width: 1200px
+        margin: 0 auto
+        padding: 10rem 0
+        transform: translate(0, 200px)
+        transition: all 1s ease-in-out
+        opacity: 0
+
+        .head
+            display: flex
+            justify-content: center
+            flex-direction: column
+            text-align: center
+            padding: 20px 0
+            position: relative
+
+            &::before
+                content: ""
+                display: inline-block
+                height: 1px
+                width: 550px
+                background-color: rgba(0, 0, 0, 0.1)
+                position: absolute
+                bottom: 0
+                left: 50%
+                -webkit-transform: translateX(-50%)
+                -ms-transform: translateX(-50%)
+                transform: translateX(-50%)
+
+            span
+                color: $green
+                font-family: $fontMedium
+                text-transform: uppercase
+                line-height: .25rem
+                font-size: 1.4rem
+
+            h2
+                font-size: 4rem
+                font-family: $fontMedium
+                line-height: 1.255
+                color: $black
+
+        .body
+            padding: 5rem
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 100px 20px
+
+    .showContent
+        transform: translate(0, 0)
+        opacity: 1
+
+@media screen and (min-width: $XS)
+    .stepThree
+
+        .wrapper
+
+            .head
+
+                &::before
+                    width: 300px
+
+                span
+                    font-size: 1rem
+                h2
+                    font-size: 2rem
+            .body
+                grid-template-columns: repeat(1, 1fr)
+                padding: 3rem
+                gap: 50px 20px
+
+@media screen and (min-width: $L)
+    .stepThree
+
+        .wrapper
+
+            .head
+
+                &::before
+                    width: 400px
+
+                span
+                    font-size: 1.1rem
+                h2
+                    font-size: 2.5rem
+            .body
+                grid-template-columns: repeat(2, 1fr)
+                padding: 5rem
+
+@media screen and (min-width: $X)
+    .stepThree
+
+        .wrapper
+
+            .head
+
+                &::before
+                    width: 550px
+                span
+                    font-size: 1.2rem
+                h2
+                    font-size: 3rem
+            .body
+
+@media screen and (min-width: $XL)
+    .stepThree
+
+        .wrapper
+
+            .head
+
+                &::before
+                span
+                    font-size: 1.3rem
+                h2
+                    font-size: 3.5rem
+            .body
+
+@media screen and (min-width: $XXL)
+    .stepThree
+        height: 100%
+        width: 100%
+
+        .wrapper
+            max-width: 1200px
+            margin: 0 auto
+            padding: 10rem 0
+
+            .head
+                display: flex
+                justify-content: center
+                flex-direction: column
+                text-align: center
+                padding: 20px 0
+                position: relative
+
+                &::before
+                    content: ""
+                    display: inline-block
+                    height: 1px
+                    width: 550px
+                    background-color: rgba(0, 0, 0, 0.1)
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    -webkit-transform: translateX(-50%)
+                    -ms-transform: translateX(-50%)
+                    transform: translateX(-50%)
+
+                span
+                    color: $green
+                    font-family: $fontMedium
+                    text-transform: uppercase
+                    line-height: .25rem
+                    font-size: 1.4rem
+
+                h2
+                    font-size: 4rem
+                    font-family: $fontMedium
+                    line-height: 1.255
+                    color: $black
+
+            .body
+                padding: 5rem
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                gap: 100px 20px

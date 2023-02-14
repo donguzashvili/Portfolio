@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useInViewport } from "react-in-viewport";
 import classes from "./stepTwo.module.sass";
 
 interface dataType {
@@ -14,7 +15,8 @@ const data: dataType = {
   languages: 2,
 };
 export const StepTwo = () => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const inViewPort = useInViewport(ref);
 
   const [numbers, setNumbers] = useState<dataType>({
     projects: 0,
@@ -36,8 +38,18 @@ export const StepTwo = () => {
     return prevNumber;
   };
 
+  const contentVisible = () => {
+    if (ref.current && ref.current.classList.contains(classes.showStepTwo))
+      return;
+    else ref.current?.classList.add(classes.showStepTwo);
+  };
+
   useEffect(() => {
-    if (everythingMatches()) return;
+    // already count up || numbers are not visible yet
+    if (everythingMatches() || !inViewPort.inViewport) return;
+
+    contentVisible();
+
     const numberInterval = setTimeout(() => {
       setNumbers((prevNumbers) => {
         return {
@@ -55,11 +67,11 @@ export const StepTwo = () => {
     return () => {
       clearTimeout(numberInterval);
     };
-  }, [numbers]);
+  }, [numbers, inViewPort]);
 
   return (
-    <section id="stepTwo" ref={ref} className={classes.stepTwo}>
-      <div className={classes.wrapper}>
+    <section id="stepTwo" className={classes.stepTwo}>
+      <div className={classes.wrapper} ref={ref}>
         <div className={classes.head}>
           <p>Hello There</p>
           <h3>
@@ -73,7 +85,7 @@ export const StepTwo = () => {
             solving issues, always find satisfying when learning new
             technologies and tring them out, worked with AGILE/SCRUM and
             Waterfall my goal is to be senior MERN stack, also have worked with
-            animations such as THREE.js and Blender
+            3D technologies such as THREE.js and Blender
           </p>
         </div>
         <div className={classes.footer}>

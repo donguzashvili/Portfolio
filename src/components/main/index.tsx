@@ -6,6 +6,8 @@ import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 import StepOne from "./step1";
 import { StepTwo } from "./step2";
+import StepThree from "./step3";
+import StepFour from "./step4";
 
 enum pageEnum {
   stepOne = 0,
@@ -75,11 +77,10 @@ const MainPage = () => {
       onKeyDown={scroll}
       onKeyUp={scroll}
     >
-      <StepOne
-        nextPage={() => setPage(() => 1)}
-        activePage={page === pageEnum.stepOne}
-      />
+      <StepOne activePage={page === pageEnum.stepOne} />
       <StepTwo />
+      <StepThree />
+      <StepFour />
     </div>
   );
 };

@@ -12,6 +12,7 @@ import component from "./routing";
 import Navigation from "./components/navigation/Navigation";
 
 import Router from "./routing";
+import Footer from "./components/footer";
 
 function App() {
   const { setData } = useContext(DataContext);
@@ -22,11 +23,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Navigation />
-      <Router />
-      {/* <RouterProvider router={component} /> */}
-    </div>
+    <>
+      <div className="App">
+        <Navigation />
+        <Router />
+        {/* <RouterProvider router={component} /> */}
+        <Footer />
+      </div>
+    </>
   );
 }
 

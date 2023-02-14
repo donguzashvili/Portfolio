@@ -53,3 +53,24 @@
                     -webkit-transform: scale(1)
                     -ms-transform: scale(1)
                     transform: scale(1)
+
+@media screen and (max-width: 476px)
+    .socialIconsWrapper
+        display: flex
+        bottom: 140px
+        padding: 10px
+        justify-content: space-around
+        width: 100vw
+        li
+            padding: 0
+            &:first-child
+                padding: 0
+
+            a
+                i
+
+                span
+                    display: none
+            &:hover
+                a
+                    span

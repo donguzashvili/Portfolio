@@ -1,0 +1,168 @@
+@import "../../styles/_variables"
+
+.footer
+    width: 100%
+    background: $dark
+
+    .footerWrapper
+        padding: 3rem
+
+        .upperContent
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 5rem
+
+            >div
+                &:last-child
+                    margin: 0 0 0 30px
+
+            span
+                color: $white
+                font-family: $fontLoraMedium
+                font-size: 1rem
+
+                a
+                    color: $white
+                    font-family: $fontLoraMedium
+
+            h3
+                color: $white
+                font-family: $fontLoraBold
+                font-size: 2rem
+
+            p
+                color: $white
+                font-family: $fontLoraMedium
+                font-size: 1.2rem
+
+        .copyrightContent
+            display: flex
+            justify-content: center
+            height: 100%
+
+            span
+                margin: 0 10px
+                width: 2px
+                background-color: rgba(255, 255, 255, 0.5)
+
+            p
+                color: $white
+                font-family: $fontLoraMedium
+                font-size: 1rem
+
+@media screen and (min-width: $XS)
+    .footer
+        width: 100%
+        background: $dark
+        position: relative
+
+        &::before
+            content: ""
+            position: absolute
+            left: 15px
+            width: calc(100% - 30px)
+            height: 1px
+            background-color: rgba(255, 255, 255, 0.5)
+
+        .footerWrapper
+            padding: 1rem
+
+            .upperContent
+                display: flex
+                justify-content: center
+                align-items: flex-start
+                margin-bottom: 1rem
+                flex-flow: column
+
+                >div
+                    &:last-child
+                        margin: 0
+
+                span
+                    color: $white
+                    font-family: $fontLoraMedium
+                    font-size: 0.9rem
+
+                    a
+                        color: $white
+                        font-family: $fontLoraMedium
+
+                h3
+                    color: $white
+                    font-family: $fontLoraBold
+                    font-size: 1.3rem
+
+                p
+                    color: $white
+                    font-family: $fontLoraMedium
+                    font-size: 0.9rem
+
+            .copyrightContent
+                display: flex
+                justify-content: center
+                flex-flow: column-reverse
+                height: 100%
+
+                span
+                    display: none
+
+                p
+                    color: $white
+                    font-family: $fontLoraMedium
+                    font-size: 0.9rem
+
+@media screen and (min-width: $L)
+    .footer
+        width: 100%
+        background: $dark
+
+        .footerWrapper
+            padding: 3rem
+
+            .upperContent
+                display: flex
+                justify-content: center
+                flex-flow: row
+                align-items: center
+                margin-bottom: 4rem
+
+                >div
+                    &:last-child
+                        margin: 0 0 0 30px
+
+                span
+                    color: $white
+                    font-family: $fontLoraMedium
+                    font-size: 1rem
+
+                    a
+                        color: $white
+                        font-family: $fontLoraMedium
+
+                h3
+                    color: $white
+                    font-family: $fontLoraBold
+                    font-size: 2rem
+
+                p
+                    color: $white
+                    font-family: $fontLoraMedium
+                    font-size: 1.2rem
+
+            .copyrightContent
+                display: flex
+                justify-content: center
+                flex-flow: row
+                height: 100%
+
+                span
+                    display: inline-flex
+                    margin: 0 10px
+                    width: 2px
+                    background-color: rgba(255, 255, 255, 0.5)
+
+                p
+                    color: $white
+                    font-family: $fontLoraMedium
+                    font-size: 1rem

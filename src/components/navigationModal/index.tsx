@@ -1,12 +1,7 @@
 import ReactDOM from "react-dom";
 
 // ** import icons
-import {
-  faFacebookF,
-  faLinkedinIn,
-  faGithub,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faLinkedinIn, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,9 +17,7 @@ const NavigationModal = () => {
   const navigate = useNavigate();
   const { setMenu } = useContext(DataContext);
 
-  const updateMenuState = (
-    event: React.MouseEvent<HTMLDivElement> | React.MouseEvent<SVGElement>
-  ) => {
+  const updateMenuState = (event: React.MouseEvent<HTMLDivElement> | React.MouseEvent<SVGElement>) => {
     event.stopPropagation();
     setMenu(false);
   };
@@ -40,20 +33,16 @@ const NavigationModal = () => {
           </div>
           <ul className={classes.body}>
             <li onClick={() => navigate("/")}>
-              <a>Home</a>
+              <p>Home</p>
             </li>
             <li onClick={() => navigate("/projects")}>
-              <a>Projects</a>
+              <p>Projects</p>
             </li>
             <li onClick={() => navigate("/cv")}>
-              <a>CV</a>
+              <p>CV</p>
             </li>
           </ul>
-          <p>
-            I will find any solution to solve your issue, I am capable to
-            fulfill your dream project, to contact me you can choose any
-            platform you want
-          </p>
+          <p>I will find any solution to solve your issue, I am capable to fulfill your dream project, to contact me you can choose any platform you want</p>
           <div className={classes.socialIcns}>
             <FontAwesomeIcon icon={faFacebookF} />
             <FontAwesomeIcon icon={faLinkedinIn} />
