@@ -1,0 +1,296 @@
+@import "../../../styles/_variables"
+@import "../../../styles/_keyframes"
+
+.stepTwo
+    height: 100%
+    width: 100%
+    background-color: $green
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .wrapper
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        transition: all 2s ease-in-out
+        opacity: 0
+        transform: translate(0, 200px)
+        padding: 16rem 20px
+
+        .head
+            position: relative
+            padding: 0 0 50px
+            &::before
+                content: ""
+                display: inline-block
+                height: 1px
+                width: 550px
+                background-color: rgba(255, 255, 255, 0.25)
+                position: absolute
+                bottom: 0
+                left: 50%
+                transition: all 0.3s ease-in-out
+                -webkit-transform: translateX(-50%)
+                -ms-transform: translateX(-50%)
+                transform: translateX(-50%)
+            p
+                color: $black
+                font-size: 1.7rem
+                font-family: $fontMedium
+                font-weight: bold
+                text-align: center
+            h3
+                font-family: $fontMedium
+                color: $white
+                font-size: 4rem
+                text-align: center
+
+                span
+            h5
+                font-family: $fontMedium
+                color: $black
+                font-size: 2.5rem
+                text-align: center
+
+        .body
+            padding: 30px 0 0
+            p
+                font-family: $fontMedium
+                font-size: 1.3rem
+                color: $black
+                line-height: 26px
+                text-align: center
+
+        .footer
+            width: 100%
+            padding: 30px 0 0
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+
+            p
+                color: $white
+                font-size: 3rem
+                font-weight: bold
+                font-family: $fontSemiBold
+            h5
+                font-family: $fontSemiBold
+                font-size: 1.5rem
+                text-transform: capitalize
+
+            div
+                text-align: center
+                padding: 0 10px
+                &:not(:last-child)
+                    border-right: 1px solid rgba(255, 255, 255, 0.25)
+
+    .showStepTwo
+        visibility: visible
+        transform: translate(0, 0)
+        opacity: 1
+
+@media screen and (min-width: $XS)
+    .stepTwo
+        .wrapper
+            max-width: 400px
+            padding: 8rem 20px
+
+            .head
+                &::before
+                    width: 300px
+                p
+                    font-size: 1.2rem
+                h3
+                    font-size: 2.5rem
+                    span
+                h5
+                    font-size: 1.5rem
+            .body
+                p
+                    font-size: 1rem
+            .footer
+                grid-template-columns: repeat(1, 1fr)
+
+                p
+                    font-size: 1.8rem
+                h5
+                    font-size: 1.1rem
+                    margin-bottom: 1rem
+                div
+                    display: flex
+                    flex-direction: column-reverse
+                    padding: 10px
+                    &:not(:last-child)
+                        border-right: none
+
+@media screen and (min-width: $L)
+    .stepTwo
+        .wrapper
+            max-width: 600px
+            padding: 14rem 20px
+
+            .head
+                &::before
+                    width: 550px
+
+                p
+                    font-size: 1.2rem
+                h3
+                    font-size: 2.5rem
+                    span
+                h5
+                    font-size: 1.5rem
+            .body
+                p
+                    font-size: 1rem
+            .footer
+                grid-template-columns: repeat(4, 1fr)
+                p
+                    font-size: 1.8rem
+                h5
+                    font-size: 1.1rem
+                div
+                    &:not(:last-child)
+                        border-right: 1px solid $gray
+
+@media screen and (min-width: $X)
+    .stepTwo
+        .wrapper
+            max-width: 800px
+            .head
+                &::before
+                p
+                    font-size: 1.3rem
+                h3
+                    font-size: 3rem
+                    span
+                h5
+                    font-size: 1.8rem
+            .body
+                p
+                    font-size: 1.1rem
+            .footer
+                p
+                    font-size: 2.2rem
+                h5
+                    font-size: 1.2rem
+                div
+                    &:not(:last-child)
+
+@media screen and (min-width: $XL)
+    .stepTwo
+        .wrapper
+            max-width: 900px
+            .head
+                &::before
+                p
+                    font-size: 1.4rem
+                h3
+                    font-size: 3.5rem
+                    span
+                h5
+                    font-size: 2rem
+            .body
+                p
+                    font-size: 1.2rem
+            .footer
+                p
+                    font-size: 2.7rem
+                h5
+                    font-size: 1.3rem
+                div
+                    &:not(:last-child)
+
+@media screen and (min-width: $XXL)
+
+    .stepTwo
+        height: 100%
+        width: 100%
+        background-color: $green
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .wrapper
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            transition: all 1s ease-in-out
+            opacity: 0
+            transform: translate(0, 200px)
+            max-width: 1100px
+            padding: 16rem 20px
+
+            .head
+                position: relative
+                padding: 0 0 50px
+                &::before
+                    content: ""
+                    display: inline-block
+                    height: 1px
+                    width: 550px
+                    background-color: rgba(255, 255, 255, 0.25)
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    -webkit-transform: translateX(-50%)
+                    -ms-transform: translateX(-50%)
+                    transform: translateX(-50%)
+                p
+                    color: $black
+                    font-size: 1.7rem
+                    font-family: $fontMedium
+                    font-weight: bold
+                    text-align: center
+                h3
+                    font-family: $fontMedium
+                    color: $white
+                    font-size: 4rem
+                    text-align: center
+
+                    span
+                h5
+                    font-family: $fontMedium
+                    color: $black
+                    font-size: 2.5rem
+                    text-align: center
+
+            .body
+                padding: 30px 0 0
+                p
+                    font-family: $fontMedium
+                    font-size: 1.3rem
+                    color: $black
+                    line-height: 26px
+                    text-align: center
+
+            .footer
+                width: 100%
+                padding: 30px 0 0
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+
+                p
+                    color: $white
+                    font-size: 3rem
+                    font-weight: bold
+                    font-family: $fontSemiBold
+                h5
+                    font-family: $fontSemiBold
+                    font-size: 1.5rem
+                    text-transform: capitalize
+
+                div
+                    text-align: center
+                    padding: 0 10px
+                    &:not(:last-child)
+                        border-right: 1px solid rgba(255, 255, 255, 0.25)
+
+        .showStepTwo
+            visibility: visible
+            transform: translate(0, 0)
+            opacity: 1

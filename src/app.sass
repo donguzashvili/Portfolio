@@ -1,0 +1,27 @@
+@import "./styles/_keyframes"
+@import "./styles/_variables"
+
+.App
+    overflow-x: hidden
+    // overflow: overlay
+
+.exit-active
+    nav
+        transition: all 0.5s ease-in-out
+        transform: translate(280px, 0)
+        opacity: 0
+
+.imageAnimation
+    transition: all 0.5s ease-in-out
+    transform: rotateY(360deg)
+
+::-webkit-scrollbar
+    width: 10px
+    background-color: $white
+
+::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background-color: $dark
+
+::-webkit-scrollbar-thumb:hover
+    background-color: #555555

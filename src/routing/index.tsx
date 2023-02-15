@@ -1,9 +1,20 @@
-import { createBrowserRouter } from "react-router-dom";
-import MainPage from "../components/main";
+import { Routes, Route } from "react-router-dom";
 
-const Router = createBrowserRouter([
-  { path: "/", element: <MainPage /> },
-  { path: "/projects", element: <div></div> },
-]);
+// ** Pages
+import CvPage from "../components/cv-page";
+import MainPage from "../components/main";
+import ProjectsPage from "../components/projectsPage";
+import AboutPage from "../components/aboutPage";
+
+const Router: React.FC = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/cv" element={<CvPage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/about" element={<AboutPage />} />
+    </Routes>
+  );
+};
 
 export default Router;

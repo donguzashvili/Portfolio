@@ -3,13 +3,16 @@ import App from "./App";
 import { ContextState } from "./state";
 
 import "./index.sass";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <ContextState>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ContextState>
   // <React.StrictMode>
   // </React.StrictMode>

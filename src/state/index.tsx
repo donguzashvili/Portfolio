@@ -1,9 +1,12 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { dataType } from "../types/dataType";
 
 interface DataContextType {
-  state: dataType | null | undefined;
-  setState: React.Dispatch<React.SetStateAction<dataType | null | undefined>>;
+  data: dataType | null | undefined;
+  setData: React.Dispatch<React.SetStateAction<dataType | null | undefined>>;
+  menu: boolean;
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const initialState = {} as dataType;
@@ -16,10 +19,11 @@ type propType = {
 };
 
 const ContextState = ({ children }: propType) => {
-  const [state, setState] = useState<dataType | null | undefined>(null);
+  const [data, setData] = useState<dataType | null | undefined>(null);
+  const [menu, setMenu] = useState<boolean>(false);
 
   return (
-    <DataContext.Provider value={{ state, setState }}>
+    <DataContext.Provider value={{ data, setData, menu, setMenu }}>
       {children}
     </DataContext.Provider>
   );

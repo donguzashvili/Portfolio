@@ -1,0 +1,135 @@
+@import "../../../../styles/_variables"
+
+.card
+    margin: 0 0 0 100px
+    .cardWrapper
+        display: flex
+
+        span
+            display: flex
+            justify-content: center
+            min-width: 80px
+
+            svg
+                font-size: 4rem
+                color: $green
+
+    .content
+        margin-left: 1rem
+        p
+            color: $darkGray
+            font-family: $fontLoraBold
+            font-size: 1rem
+
+        .head
+            display: flex
+            align-items: flex-start
+            padding: 0 0 25px
+
+            h2
+                font-size: 2.5rem
+                line-height: 1.1
+                font-family: $fontSemiBold
+
+@media screen and (min-width: $XS)
+    .card
+        margin: 0px
+        .cardWrapper
+            flex-direction: column
+            span
+                min-width: 70px
+                margin-bottom: 1rem
+                svg
+                    font-size: 3rem
+            .content
+                p
+                    font-size: 0.9rem
+                    text-align: center
+                .head
+                    padding: 0 0 15px
+                    justify-content: center
+                    h2
+                        font-size: 2rem
+
+@media screen and (min-width: $L)
+    .card
+        .cardWrapper
+            flex-direction: row
+            span
+                min-width: 70px
+                svg
+                    font-size: 3rem
+            .content
+                p
+                    font-size: 0.9rem
+                    text-align: start
+                .head
+                    padding: 0 0 15px
+                    justify-content: flex-start
+
+                    h2
+                        font-size: 2rem
+
+@media screen and (min-width: $X)
+    .card
+        margin: 0 0 0 80px
+        .cardWrapper
+
+            span
+                min-width: 70px
+                svg
+                    font-size: 3rem
+            .content
+                p
+                    font-size: 0.9rem
+                .head
+                    padding: 0 0 15px
+                    h2
+                        font-size: 2rem
+
+@media screen and (min-width: $XL)
+    .card
+        .cardWrapper
+
+            span
+
+                svg
+                    font-size: 3.5rem
+            .content
+                p
+
+                .head
+
+                    h2
+                        font-size: 2.2rem
+
+@media screen and (min-width: $XXL)
+    .card
+        margin: 0 0 0 100px
+        .cardWrapper
+            display: flex
+
+            span
+                display: flex
+                justify-content: center
+                min-width: 80px
+
+                svg
+                    font-size: 4rem
+                    color: $green
+
+            .content
+                margin-left: 1rem
+                p
+                    color: $darkGray
+                    font-family: $fontLoraBold
+
+                .head
+                    display: flex
+                    align-items: flex-start
+                    padding: 0 0 25px
+
+                    h2
+                        font-size: 2.5rem
+                        line-height: 1.1
+                        font-family: $fontSemiBold

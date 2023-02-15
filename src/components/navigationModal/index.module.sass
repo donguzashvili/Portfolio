@@ -1,0 +1,86 @@
+@import "../../styles/_variables"
+@import "../../styles/_keyframes"
+
+.navigationLayout
+    height: 100%
+    width: 100%
+    position: fixed
+    top: 0
+    background-color: rgba(0, 0, 0, 0.4)
+    z-index: 25
+    display: flex
+    justify-content: flex-end
+
+    .layout
+        height: 100%
+        width: 100%
+        z-index: 2
+        position: absolute
+        top: 0
+
+    .navigation
+        position: relative
+        width: 280px
+        height: 100%
+        background: $black
+        z-index: 3
+        animation: 0.5s openMenuTransition
+        box-shadow: 0px 0px 15px 5px $black
+
+        .navigationWrapper
+            position: inherit
+            padding: 3.6rem 3rem 3.6rem 3.6rem
+            z-index: 10
+            animation: 0.65s openMenuTransition
+
+        .head
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-flow: row nowrap
+            border-bottom: 1px solid $gray
+            padding-bottom: 15px
+
+            span
+                color: $green
+                text-transform: uppercase
+                font-family: $fontMedium
+
+            svg
+                color: $white
+                cursor: pointer
+
+        .body
+            display: flex
+            flex-direction: column
+            margin-top: 10px
+
+            li
+                color: $white
+                list-style-type: none
+                padding: 10px 0
+                cursor: pointer
+
+                p
+                    font-family: $fontSemiBold
+                    font-size: 18px
+                    margin: 0
+
+        p
+            margin: 15px 0
+            color: $gray
+            font-family: $fontMedium
+
+        .socialIcns
+            display: flex
+            justify-content: space-around
+            svg
+                color: $gray
+                cursor: pointer
+                transition: all 0.3s ease-in-out
+                &:hover
+                    color: $white
+
+.navUnmount-exit-active
+    .navigation
+        transform: translate(-200px, 0)

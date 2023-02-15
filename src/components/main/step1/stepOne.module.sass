@@ -1,11 +1,6 @@
 @import "../../../styles/_variables"
 @import "../../../styles/_mixins"
-
-@keyframes animateTitle
-    0%
-        width: 0
-    100%
-        width: 100%
+@import "../../../styles/_keyframes"
 
 .stepOne
     position: relative
@@ -40,6 +35,7 @@
         justify-content: center
         align-items: center
         position: relative
+        padding: 23rem 0
         .scrollDownIcon
             position: absolute
             display: flex
@@ -50,13 +46,16 @@
             cursor: pointer
             svg
                 color: $green
-            p
-                font-family: $FontFamily
+            a
+                text-decoration: none
+                font-family: $fontSemiBold
                 text-transform: uppercase
                 padding: 0 0 0 10px
                 color: $white
         .textWrapper
             user-select: none
+            transition: all 0.3s ease-in-out
+            animation: 1s homeMainTextTransition
             > span
                 color: $gray
                 font-family: "montserrat-medium", sans-serif
@@ -129,6 +128,7 @@
             justify-content: center
             align-items: center
             position: relative
+            padding: 17rem 0
             .textWrapper
                 user-select: none
                 > span
@@ -183,6 +183,7 @@
         .logoIcon
             path
         .stepOneTextWrapper
+            padding: 21rem 0
 
             .textWrapper
                 > span
@@ -207,7 +208,7 @@
         .logoIcon
             path
         .stepOneTextWrapper
-
+            padding: 20rem 0
             .textWrapper
                 > span
                     font-size: 1.3rem
@@ -227,6 +228,7 @@
         .logoIcon
             path
         .stepOneTextWrapper
+            padding: 20rem 0
 
             .textWrapper
                 > span
@@ -251,11 +253,12 @@
         .logoIcon
             path
         .stepOneTextWrapper
+            padding: 22.5rem 0
 
             .textWrapper
                 > span
                     color: $gray
-                    font-family: $FontFamily
+                    font-family: $fontMedium
                     font-size: 1.6rem
                 h3
                     font-size: 4.5rem
