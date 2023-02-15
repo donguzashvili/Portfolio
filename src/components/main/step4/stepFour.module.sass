@@ -94,6 +94,10 @@
                                 opacity: 1
                                 transform: translate(0, 0)
 
+                        img
+                            transform: scale(1.1)
+                            transition: all 0.5s ease-out
+
                     img
                         height: 100%
                         width: 100%
@@ -122,6 +126,10 @@
                     .imageCard
                         height: 100%
                         width: 100%
+                        .cardDescriptionLayout
+                            .cardDescription
+                                p
+                                    font-size: 1.5rem
 
                         &:hover
                             width: 100%
@@ -149,6 +157,10 @@
                     flex-flow: row
                     .imageCard
                         height: 400px
+                        .cardDescriptionLayout
+                            .cardDescription
+                                p
+                                    font-size: 2rem
 
                     &:first-child
                         .imageCard
@@ -172,6 +184,13 @@
 @media screen and (min-width: $X)
     .stepFour
         .wrapper
+            .body
+                .cardWrapper
+                    .imageCard
+                        .cardDescriptionLayout
+                            .cardDescription
+                                p
+                                    font-size: 2.5rem
             .head
                 span
                     font-size: 1.2rem

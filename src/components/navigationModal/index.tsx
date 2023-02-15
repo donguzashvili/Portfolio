@@ -17,9 +17,13 @@ const NavigationModal = () => {
   const navigate = useNavigate();
   const { setMenu } = useContext(DataContext);
 
-  const updateMenuState = (event: React.MouseEvent<HTMLDivElement> | React.MouseEvent<SVGElement>) => {
-    event.stopPropagation();
+  const updateMenuState = () => {
     setMenu(false);
+  };
+
+  const redirectToPage = (url: string) => {
+    navigate(url);
+    updateMenuState();
   };
 
   return ReactDOM.createPortal(
@@ -32,13 +36,13 @@ const NavigationModal = () => {
             <FontAwesomeIcon icon={faXmark} onClick={updateMenuState} />
           </div>
           <ul className={classes.body}>
-            <li onClick={() => navigate("/")}>
+            <li onClick={() => redirectToPage("/")}>
               <p>Home</p>
             </li>
-            <li onClick={() => navigate("/projects")}>
+            <li onClick={() => redirectToPage("/projects")}>
               <p>Projects</p>
             </li>
-            <li onClick={() => navigate("/cv")}>
+            <li onClick={() => redirectToPage("/cv")}>
               <p>CV</p>
             </li>
           </ul>

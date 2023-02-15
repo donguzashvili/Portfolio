@@ -1,27 +1,13 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import SocialIcons from "../socialIcons/SocialIcons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import classes from "./stepOne.module.sass";
 import { useNavigate } from "react-router-dom";
 
-interface Props {
-  activePage: boolean;
-}
-
-const StepOne = ({ activePage }: Props) => {
+const StepOne = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (activePage)
-      sectionRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-  }, [activePage]);
-
-  useEffect(() => {}, []);
 
   return (
     <section id="stepOne" ref={sectionRef} className={classes.stepOne}>
@@ -35,10 +21,7 @@ const StepOne = ({ activePage }: Props) => {
             <button onClick={() => navigate("/about")}>About Me</button>
           </div>
         </div>
-        <div className={classes.scrollDownIcon}>
-          <FontAwesomeIcon icon={faChevronDown} />
-          <a href="#stepTwo">scroll down</a>
-        </div>
+
         <SocialIcons />
       </div>
     </section>

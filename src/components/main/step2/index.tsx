@@ -30,17 +30,13 @@ export const StepTwo = () => {
     return Object.values(numbers).every((el, indx) => el === dataValues[indx]);
   };
 
-  const propertyMatches = (
-    prevNumber: number,
-    property: "projects" | "experience" | "technologies" | "languages"
-  ) => {
+  const propertyMatches = (prevNumber: number, property: "projects" | "experience" | "technologies" | "languages") => {
     if (prevNumber < data[property]) return prevNumber + 1;
     return prevNumber;
   };
 
   const contentVisible = () => {
-    if (ref.current && ref.current.classList.contains(classes.showStepTwo))
-      return;
+    if (ref.current && ref.current.classList.contains(classes.showStepTwo)) return;
     else ref.current?.classList.add(classes.showStepTwo);
   };
 
@@ -55,10 +51,7 @@ export const StepTwo = () => {
         return {
           projects: propertyMatches(prevNumbers.projects, "projects"),
           experience: propertyMatches(prevNumbers.experience, "experience"),
-          technologies: propertyMatches(
-            prevNumbers.technologies,
-            "technologies"
-          ),
+          technologies: propertyMatches(prevNumbers.technologies, "technologies"),
           languages: propertyMatches(prevNumbers.languages, "languages"),
         };
       });
@@ -81,18 +74,15 @@ export const StepTwo = () => {
         </div>
         <div className={classes.body}>
           <p>
-            I am highly motivated hardworker person, who loves coding and and
-            solving issues, always find satisfying when learning new
-            technologies and tring them out, worked with AGILE/SCRUM and
-            Waterfall my goal is to be senior MERN stack, also have worked with
-            3D technologies such as THREE.js and Blender
+            I am highly motivated hardworker person, who loves coding and and solving issues, always find satisfying when learning new technologies and tring them out, worked with AGILE/SCRUM and
+            Waterfall my goal is to be senior MERN stack, also have worked with 3D technologies such as THREE.js and Blender
           </p>
         </div>
         <div className={classes.footer}>
-          {Object.keys(data).map((el) => (
-            <div>
+          {Object.keys(data).map((el, idx) => (
+            <div key={idx}>
               {/* @ts-ignore */}
-              <p>{el === "technologies" ? `+${numbers[el]}` : numbers[el]}</p>
+              <p>{el === "technologies" || el === "projects" ? `+${numbers[el]}` : numbers[el]}</p>
               <h5>{el}</h5>
             </div>
           ))}

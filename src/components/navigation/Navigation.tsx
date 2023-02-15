@@ -9,10 +9,6 @@ import { CSSTransition } from "react-transition-group";
 const Navigation = () => {
   const { menu, setMenu } = useContext(DataContext);
 
-  useEffect(() => {
-    console.log(menu);
-  }, [menu]);
-
   return (
     <div className={classes.navigation}>
       <div className={classes.menuWrapper}>

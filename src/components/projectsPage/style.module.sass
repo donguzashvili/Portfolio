@@ -1,0 +1,726 @@
+@import "../../styles/_variables"
+
+.projectsPage
+    display: flex
+    width: 100%
+    background-color: $dark
+
+    .wrapper
+        padding: 3rem
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .header
+            text-align: center
+
+            h5
+                color: $green
+                font-size: 1.5rem
+                font-family: $fontLoraMedium
+
+            h2
+                color: $white
+                font-size: 3rem
+                font-family: $fontLoraBold
+
+        .body
+            width: 100%
+            .search
+                width: 100%
+                label
+                    display: flex
+                    justify-content: center
+                    width: calc(100% - 15rem)
+                    margin: 3rem auto 0
+                    background-color: $white
+                    border-radius: 15px
+                    outline: none
+
+                    input
+                        width: 100%
+                        height: 100%
+                        background-color: transparent
+                        border: none
+                        padding: 20px
+                        outline: none
+                        font-size: 1.2rem
+                        font-family: $fontMedium
+                        color: $black
+
+                        &::placeholder
+                            color: $black
+                            font-size: 1.2rem
+                            font-family: $fontMedium
+
+            .projectContainer
+                width: 100%
+                padding: 2rem
+                > a
+                    text-decoration: none
+
+                .project
+                    width: 100%
+                    height: 400px
+                    margin: 20px 0
+                    padding: 20px
+                    position: relative
+                    cursor: pointer
+
+                    >span
+                        position: absolute
+                        transition: all 0.5s ease-in-out
+
+                        &:nth-child(2)
+                            background: $green
+                            left: 0
+                            bottom: 0
+                            height: 0
+                            width: 2px
+
+                        &:nth-child(3)
+                            background: $green
+                            left: 0
+                            top: 0
+                            height: 2px
+                            width: 0
+
+                        &:nth-child(4)
+                            background: $green
+                            right: 0
+                            top: 0
+                            height: 0
+                            width: 2px
+
+                        &:nth-child(5)
+                            background: $green
+                            bottom: 0
+                            height: 2px
+                            left: 2.5rem
+                            width: calc(100% - 5rem)
+                            transition: all 0.5s ease-in-out
+
+                    &:hover
+                        &::after
+                            display: none
+                            content: none
+                        >span
+                            &:nth-child(2), &:nth-child(4)
+                                height: 100%
+                            &:nth-child(3), &:nth-child(5)
+                                width: 100%
+                            &:nth-child(5)
+                                left: 0
+                        .projectWrapper
+                            img
+                                max-width: 100%
+                                padding: 0
+                            .projectContent
+                                opacity: 0
+                                width: 0
+
+                    .projectWrapper
+                        display: flex
+                        width: 100%
+                        height: 100%
+
+                        img
+                            width: 100%
+                            height: 100%
+                            max-width: 50%
+                            object-fit: cover
+                            border-radius: 5px
+                            padding: 0 2rem 0 0
+                            transition: all 0.5s ease-in-out
+
+                        .projectContent
+                            color: $white
+                            width: 100%
+                            transition: all 0.3s ease-in-out
+                            display: flex
+                            flex-flow: column
+
+                            ul
+                                padding: 2rem 0 0
+
+                            h5
+                                text-align: center
+                                font-size: 2.5rem
+                                font-family: $fontSemiBold
+                                padding: 0 0 20px
+                                margin: 0 0 20px
+                                position: relative
+
+                                &::after
+                                    content: ""
+                                    position: absolute
+                                    bottom: 0
+                                    left: 2.5rem
+                                    width: calc(100% - 5rem)
+                                    height: 1px
+                                    background-color: rgba(255, 255, 255, 0.4)
+                            li
+                                list-style-type: disc
+                                list-style-position: outside
+                                padding: 5px 0
+
+                                span
+                                    display: flex
+                                    align-content: center
+                                    p
+                                        font-family: $fontLoraBold
+                                        font-weight: bold
+                                &:first-child
+                                    span
+                                        p
+                                            margin: 0 5px
+
+@media screen and (min-width: $XS)
+    .projectsPage
+        display: flex
+        width: 100%
+        background-color: $dark
+
+        .wrapper
+            padding: 1rem
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            .header
+                text-align: center
+
+                h5
+                    color: $green
+                    font-size: 0.9rem
+                    font-family: $fontLoraMedium
+
+                h2
+                    color: $white
+                    font-size: 1.2rem
+                    font-family: $fontLoraBold
+
+            .body
+                width: 100%
+                .search
+                    width: 100%
+                    label
+                        display: flex
+                        justify-content: center
+                        width: calc(100% - 15rem)
+                        margin: 3rem auto 0
+                        background-color: $white
+                        border-radius: 15px
+                        outline: none
+
+                        input
+                            width: 100%
+                            height: 100%
+                            background-color: transparent
+                            border: none
+                            padding: 20px
+                            outline: none
+                            font-size: 1.2rem
+                            font-family: $fontMedium
+                            color: $black
+
+                            &::placeholder
+                                color: $black
+                                font-size: 1.2rem
+                                font-family: $fontMedium
+
+                .projectContainer
+                    width: 100%
+                    padding: 2rem
+                    > a
+                        text-decoration: none
+
+                    .project
+                        width: 100%
+                        height: unset
+                        margin: 20px 0
+                        padding: 20px
+                        position: relative
+                        cursor: pointer
+
+                        >span
+                            position: absolute
+                            transition: all 0.5s ease-in-out
+
+                            &:nth-child(2)
+                                background: $green
+                                left: 0
+                                bottom: 0
+                                height: 0
+                                width: 2px
+
+                            &:nth-child(3)
+                                background: $green
+                                left: 0
+                                top: 0
+                                height: 2px
+                                width: 0
+
+                            &:nth-child(4)
+                                background: $green
+                                right: 0
+                                top: 0
+                                height: 0
+                                width: 2px
+
+                            &:nth-child(5)
+                                background: $green
+                                bottom: 0
+                                height: 2px
+                                left: 2.5rem
+                                width: calc(100% - 5rem)
+                                transition: all 0.5s ease-in-out
+
+                        &:hover
+                            &::after
+                                display: flex
+                                content: ""
+                            >span
+                                &:nth-child(2), &:nth-child(4)
+                                &:nth-child(3), &:nth-child(5)
+                                &:nth-child(5)
+                            .projectWrapper
+                                img
+                                .projectContent
+                                    width: 100%
+                                    opacity: 1
+
+                        .projectWrapper
+                            display: flex
+                            width: 100%
+                            height: 100%
+                            flex-direction: column
+
+                            img
+                                width: 100%
+                                height: 100%
+                                max-width: 100%
+                                object-fit: cover
+                                border-radius: 5px
+                                padding: 0
+                                transition: all 0.5s ease-in-out
+
+                            .projectContent
+                                padding: 2rem 0
+                                ul
+                                    padding: 1rem 0 0 2rem
+
+                                h5
+                                    font-size: 1.2rem
+                                    &::after
+                                        content: ""
+                                        position: absolute
+                                        bottom: 0
+                                        left: 2.5rem
+                                        width: calc(100% - 5rem)
+                                        height: 1px
+                                        background-color: rgba(255, 255, 255, 0.4)
+                                li
+                                    list-style-type: disc
+                                    list-style-position: outside
+                                    padding: 5px 0
+
+                                    span
+                                        display: flex
+                                        align-content: center
+                                        font-size: 0.8rem
+                                        p
+                                            font-family: $fontLoraBold
+                                            font-weight: bold
+                                    &:first-child
+                                        span
+                                            p
+                                                margin: 0 5px
+
+@media screen and (min-width: $L)
+    .projectsPage
+
+        .wrapper
+
+            .header
+
+                h5
+                    font-size: 1rem
+                h2
+                    font-size: 1.5rem
+
+            .body
+                .search
+                    label
+
+                        input
+
+                            &::placeholder
+
+                .projectContainer
+
+                    > a
+
+                    .project
+
+                        >span
+
+                            &:nth-child(2)
+
+                            &:nth-child(3)
+
+                            &:nth-child(4)
+
+                            &:nth-child(5)
+
+                        &:hover
+                            &::after
+                            >span
+                                &:nth-child(2), &:nth-child(4)
+                                &:nth-child(3), &:nth-child(5)
+                                &:nth-child(5)
+                            .projectWrapper
+                                img
+                                .projectContent
+
+                        .projectWrapper
+
+                            img
+
+                            .projectContent
+
+                                ul
+
+                                h5
+                                    font-size: 1.3rem
+                                    &::after
+
+                                li
+
+                                    span
+                                        font-size: 0.8rem
+                                        p
+                                    &:first-child
+                                        span
+                                            p
+
+@media screen and (min-width: $X)
+    .projectsPage
+
+        .wrapper
+
+            .header
+
+                h5
+                    font-size: 1.1rem
+                h2
+                    font-size: 2rem
+
+            .body
+                .search
+                    label
+
+                        input
+
+                            &::placeholder
+
+                .projectContainer
+
+                    > a
+
+                    .project
+
+                        >span
+
+                            &:nth-child(2)
+
+                            &:nth-child(3)
+
+                            &:nth-child(4)
+
+                            &:nth-child(5)
+
+                        &:hover
+                            &::after
+                            >span
+                                &:nth-child(2), &:nth-child(4)
+                                &:nth-child(3), &:nth-child(5)
+                                &:nth-child(5)
+                            .projectWrapper
+                                img
+                                .projectContent
+                                    opacity: 0
+
+                        .projectWrapper
+                            flex-direction: row
+                            img
+                                max-width: 50%
+
+                            .projectContent
+                                padding: 0
+
+                                ul
+
+                                h5
+                                    font-size: 1.5rem
+                                    &::after
+
+                                li
+
+                                    span
+                                        font-size: 0.8rem
+                                        p
+                                    &:first-child
+                                        span
+                                            p
+
+@media screen and (min-width: $XL)
+    .projectsPage
+
+        .wrapper
+
+            .header
+
+                h5
+                    font-size: 1.2rem
+                h2
+                    font-size: 2.5rem
+
+            .body
+                .search
+                    label
+
+                        input
+
+                            &::placeholder
+
+                .projectContainer
+
+                    > a
+
+                    .project
+
+                        >span
+
+                            &:nth-child(2)
+
+                            &:nth-child(3)
+
+                            &:nth-child(4)
+
+                            &:nth-child(5)
+
+                        &:hover
+                            &::after
+                            >span
+                                &:nth-child(2), &:nth-child(4)
+                                &:nth-child(3), &:nth-child(5)
+                                &:nth-child(5)
+                            .projectWrapper
+                                img
+                                .projectContent
+
+                        .projectWrapper
+
+                            img
+
+                            .projectContent
+
+                                ul
+
+                                h5
+                                    font-size: 2rem
+                                    &::after
+
+                                li
+
+                                    span
+                                        font-size: 0.9rem
+                                        p
+                                    &:first-child
+                                        span
+                                            p
+
+@media screen and (min-width: $XXL)
+    .projectsPage
+        display: flex
+        width: 100%
+        background-color: $dark
+
+        .wrapper
+            padding: 3rem
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            .header
+                text-align: center
+
+                h5
+                    color: $green
+                    font-size: 1.5rem
+                    font-family: $fontLoraMedium
+
+                h2
+                    color: $white
+                    font-size: 3rem
+                    font-family: $fontLoraBold
+
+            .body
+                width: 100%
+                .search
+                    width: 100%
+                    label
+                        display: flex
+                        justify-content: center
+                        width: calc(100% - 15rem)
+                        margin: 3rem auto 0
+                        background-color: $white
+                        border-radius: 15px
+                        outline: none
+
+                        input
+                            width: 100%
+                            height: 100%
+                            background-color: transparent
+                            border: none
+                            padding: 20px
+                            outline: none
+                            font-size: 1.2rem
+                            font-family: $fontMedium
+                            color: $black
+
+                            &::placeholder
+                                color: $black
+                                font-size: 1.2rem
+                                font-family: $fontMedium
+
+                .projectContainer
+                    width: 100%
+                    padding: 2rem
+                    > a
+                        text-decoration: none
+
+                    .project
+                        width: 100%
+                        height: 400px
+                        margin: 20px 0
+                        padding: 20px
+                        position: relative
+                        cursor: pointer
+
+                        >span
+                            position: absolute
+                            transition: all 0.5s ease-in-out
+
+                            &:nth-child(2)
+                                background: $green
+                                left: 0
+                                bottom: 0
+                                height: 0
+                                width: 2px
+
+                            &:nth-child(3)
+                                background: $green
+                                left: 0
+                                top: 0
+                                height: 2px
+                                width: 0
+
+                            &:nth-child(4)
+                                background: $green
+                                right: 0
+                                top: 0
+                                height: 0
+                                width: 2px
+
+                            &:nth-child(5)
+                                background: $green
+                                bottom: 0
+                                height: 2px
+                                left: 2.5rem
+                                width: calc(100% - 5rem)
+                                transition: all 0.5s ease-in-out
+
+                        &:hover
+                            &::after
+                                display: none
+                                content: none
+                            >span
+                                &:nth-child(2), &:nth-child(4)
+                                    height: 100%
+                                &:nth-child(3), &:nth-child(5)
+                                    width: 100%
+                                &:nth-child(5)
+                                    left: 0
+                            .projectWrapper
+                                img
+                                    max-width: 100%
+                                    padding: 0
+                                .projectContent
+                                    opacity: 0
+                                    width: 0
+
+                        .projectWrapper
+                            display: flex
+                            width: 100%
+                            height: 100%
+
+                            img
+                                width: 100%
+                                height: 100%
+                                max-width: 50%
+                                object-fit: cover
+                                border-radius: 5px
+                                padding: 0 2rem 0 0
+                                transition: all 0.5s ease-in-out
+
+                            .projectContent
+                                color: $white
+                                width: 100%
+                                transition: all 0.3s ease-in-out
+                                display: flex
+                                flex-flow: column
+
+                                ul
+                                    padding: 2rem 0 0
+
+                                h5
+                                    text-align: center
+                                    font-size: 2.5rem
+                                    font-family: $fontSemiBold
+                                    padding: 0 0 20px
+                                    margin: 0 0 20px
+                                    position: relative
+
+                                    &::after
+                                        content: ""
+                                        position: absolute
+                                        bottom: 0
+                                        left: 2.5rem
+                                        width: calc(100% - 5rem)
+                                        height: 1px
+                                        background-color: rgba(255, 255, 255, 0.4)
+                                li
+                                    list-style-type: disc
+                                    list-style-position: outside
+                                    padding: 5px 0
+
+                                    span
+                                        display: flex
+                                        align-content: center
+                                        font-size: 1rem
+
+                                        p
+                                            font-family: $fontLoraBold
+                                            font-weight: bold
+                                    &:first-child
+                                        span
+                                            p
+                                                margin: 0 5px

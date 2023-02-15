@@ -16,11 +16,11 @@ import Footer from "./components/footer";
 
 function App() {
   const { setData } = useContext(DataContext);
-  useEffect(() => {
-    fetch("http://localhost:8000")
-      .then((res) => res.json())
-      .then((res) => setData(res));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:8000")
+  //     .then((res) => res.json())
+  //     .then((res) => setData(res));
+  // }, []);
 
   return (
     <>

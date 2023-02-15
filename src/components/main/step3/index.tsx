@@ -51,7 +51,7 @@ const StepThree: React.FC = () => {
         </div>
         <div className={classes.body}>
           {SkillArray.map((el, indx) => (
-            <SkillItem icon={el.icon} title={el.title} description={el.description} />
+            <SkillItem key={indx} icon={el.icon} title={el.title} description={el.description} />
           ))}
         </div>
       </div>
