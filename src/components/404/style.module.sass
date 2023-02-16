@@ -1,0 +1,85 @@
+@import "../../styles/_variables"
+@import "../../styles/_mixins"
+@import "../../styles/_keyframes"
+
+.error
+    position: relative
+    height: 100%
+    width: 100%
+    &::before
+        content: ""
+        position: absolute
+        background: url("../../assets/images/background-1.avif")
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        height: 100%
+        width: 100%
+        filter: brightness(30%) saturate(200%)
+        z-index: -1
+
+    .wrapper
+        height: 100%
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 2rem
+
+        .header
+            display: flex
+
+            h2
+                color: $green
+                font-size: 3rem
+                font-family: $fontLoraMedium
+
+        .btnWrapper
+            width: 30%
+            margin: 0 auto
+            display: flex
+            flex-direction: column
+            button
+                @include Btn
+                width: 100%
+                animation: 2s animateFromBottom
+
+@media screen and (min-width: $XS)
+    .error
+
+        .wrapper
+
+            .header
+
+                h2
+                    font-size: 1.5rem
+
+            .btnWrapper
+                width: 100%
+
+@media screen and (min-width: $L)
+    .error
+
+        .wrapper
+
+            .header
+
+                h2
+                    font-size: 2rem
+
+            .btnWrapper
+                width: 100%
+
+@media screen and (min-width: $X)
+    .error
+
+        .wrapper
+
+            .header
+
+                h2
+                    font-size: 3rem
+
+            .btnWrapper
+                width: 30%
