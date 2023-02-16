@@ -4,7 +4,6 @@ import { faLaptop, faServer, faCube } from "@fortawesome/free-solid-svg-icons";
 import { faFigma } from "@fortawesome/free-brands-svg-icons";
 import SkillItem from "./skill_item/skillItem";
 import { useEffect, useRef } from "react";
-import { useInViewport } from "react-in-viewport";
 
 const SkillArray = [
   {
@@ -34,17 +33,9 @@ const SkillArray = [
 ];
 
 const StepThree: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const inViewPort = useInViewport(ref);
-
-  useEffect(() => {
-    if (!inViewPort.inViewport || ref.current?.classList.contains(classes.showContent)) return;
-    ref.current?.classList.add(classes.showContent);
-  }, [inViewPort]);
-
   return (
     <section className={classes.stepThree}>
-      <div className={classes.wrapper} ref={ref}>
+      <div className={classes.wrapper}>
         <div className={classes.head}>
           <span>What i can</span>
           <h2>Why i am good?</h2>
