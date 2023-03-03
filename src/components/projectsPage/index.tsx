@@ -10,6 +10,7 @@ import PasswordGenerator from "../../assets/images/RandomPassword.png";
 import FoodOrder from "../../assets/images/FoodOrder.png";
 import FindMeals from "../../assets/images/findFood.png";
 import Callapp from "../../assets/images/callapp.png";
+import Skote from "../../assets/images/skote.png";
 
 // ** style imports
 import classes from "./style.module.sass";
@@ -81,6 +82,12 @@ const projects = [
     picture: Callapp,
     title: "Test: callapp login page",
     description: ["HTML, Css, Javascript", "Develop template for learning purposes"],
+  },
+  {
+    link: "https://donguzashvili.github.io/coding-with-scss/",
+    picture: Skote,
+    title: "Test: Skote",
+    description: ["HTML, Css, Scss", "Develop template for learning purposes", "Everything was built by hand", "First project"],
   },
 ];
 
