@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.aa5f3c83.css",
-    "main.js": "/Portfolio/static/js/main.2086e945.js",
+    "main.js": "/Portfolio/static/js/main.4da3f942.js",
     "static/media/Swingers.png": "/Portfolio/static/media/Swingers.84f9e91a46524f80e06e.png",
     "static/media/BPO.png": "/Portfolio/static/media/BPO.bcb41d02634be6589191.png",
     "static/media/myimage2.jpg": "/Portfolio/static/media/myimage2.e15bed488eaffc9d6169.jpg",
@@ -19,6 +19,7 @@
     "static/media/Montserrat-SemiBold.ttf": "/Portfolio/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
     "static/media/Montserrat-Medium.ttf": "/Portfolio/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/Montserrat-Bold.ttf": "/Portfolio/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
+    "static/media/skote.png": "/Portfolio/static/media/skote.2e4523656a39db0a1227.png",
     "static/media/myimage.jpg": "/Portfolio/static/media/myimage.0a3eb42abb5c2ff283f9.jpg",
     "static/media/Software.ge.png": "/Portfolio/static/media/Software.ge.b22d23c698f3d4ec0d4b.png",
     "static/media/Shota Donguzashvili.pdf": "/Portfolio/static/media/Shota Donguzashvili.a2ea744fa57a3c7cf814.pdf",
@@ -26,10 +27,10 @@
     "static/media/callapp.png": "/Portfolio/static/media/callapp.b873c267c83b36ccb07d.png",
     "index.html": "/Portfolio/index.html",
     "main.aa5f3c83.css.map": "/Portfolio/static/css/main.aa5f3c83.css.map",
-    "main.2086e945.js.map": "/Portfolio/static/js/main.2086e945.js.map"
+    "main.4da3f942.js.map": "/Portfolio/static/js/main.4da3f942.js.map"
   },
   "entrypoints": [
     "static/css/main.aa5f3c83.css",
-    "static/js/main.2086e945.js"
+    "static/js/main.4da3f942.js"
   ]
 }
