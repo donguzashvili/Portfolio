@@ -11,6 +11,7 @@ import FoodOrder from "../../assets/images/FoodOrder.png";
 import FindMeals from "../../assets/images/findFood.png";
 import Callapp from "../../assets/images/callapp.png";
 import Skote from "../../assets/images/skote.png";
+import SentoBar from "../../assets/images/SentoBar.png";
 
 // ** style imports
 import classes from "./style.module.sass";
@@ -87,7 +88,13 @@ const projects = [
     link: "https://donguzashvili.github.io/coding-with-scss/",
     picture: Skote,
     title: "Test: Skote",
-    description: ["HTML, Css, Scss", "Develop template for learning purposes", "Everything was built by hand", "First project"],
+    description: ["HTML, Css, Scss", "Develop template for learning purposes", "Everything was built by hand"],
+  },
+  {
+    link: "https://donguzashvili.github.io/Sentobar/",
+    picture: SentoBar,
+    title: "Test: SENTOBAR",
+    description: ["HTML, Css, Bootstrap", "Develop template for learning purposes", "First project"],
   },
 ];
 
