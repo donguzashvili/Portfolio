@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.aa5f3c83.css",
-    "main.js": "/Portfolio/static/js/main.bf626682.js",
+    "main.js": "/Portfolio/static/js/main.a0f139d6.js",
     "static/media/Swingers.png": "/Portfolio/static/media/Swingers.84f9e91a46524f80e06e.png",
     "static/media/BPO.png": "/Portfolio/static/media/BPO.bcb41d02634be6589191.png",
     "static/media/SentoBar.png": "/Portfolio/static/media/SentoBar.8f251473d1120b6175ed.png",
@@ -23,15 +23,15 @@
     "static/media/skote.png": "/Portfolio/static/media/skote.2e4523656a39db0a1227.png",
     "static/media/myimage.jpg": "/Portfolio/static/media/myimage.0a3eb42abb5c2ff283f9.jpg",
     "static/media/Software.ge.png": "/Portfolio/static/media/Software.ge.b22d23c698f3d4ec0d4b.png",
-    "static/media/Shota Donguzashvili.pdf": "/Portfolio/static/media/Shota Donguzashvili.a2ea744fa57a3c7cf814.pdf",
+    "static/media/Shota Donguzashvili.pdf": "/Portfolio/static/media/Shota Donguzashvili.11b62d8a3552ee2e39ba.pdf",
     "static/media/StoryHub.png": "/Portfolio/static/media/StoryHub.c9c607115d3a01795e4b.png",
     "static/media/callapp.png": "/Portfolio/static/media/callapp.b873c267c83b36ccb07d.png",
     "index.html": "/Portfolio/index.html",
     "main.aa5f3c83.css.map": "/Portfolio/static/css/main.aa5f3c83.css.map",
-    "main.bf626682.js.map": "/Portfolio/static/js/main.bf626682.js.map"
+    "main.a0f139d6.js.map": "/Portfolio/static/js/main.a0f139d6.js.map"
   },
   "entrypoints": [
     "static/css/main.aa5f3c83.css",
-    "static/js/main.bf626682.js"
+    "static/js/main.a0f139d6.js"
   ]
 }
