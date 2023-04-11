@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.aa5f3c83.css",
-    "main.js": "/Portfolio/static/js/main.a0f139d6.js",
+    "main.js": "/Portfolio/static/js/main.aec103c4.js",
     "static/media/Swingers.png": "/Portfolio/static/media/Swingers.84f9e91a46524f80e06e.png",
     "static/media/BPO.png": "/Portfolio/static/media/BPO.bcb41d02634be6589191.png",
     "static/media/SentoBar.png": "/Portfolio/static/media/SentoBar.8f251473d1120b6175ed.png",
@@ -10,6 +10,7 @@
     "static/media/RandomPassword.png": "/Portfolio/static/media/RandomPassword.e412f128f18745e2571c.png",
     "static/media/background-1.jpg": "/Portfolio/static/media/background-1.390b901b8a548e5fa4c1.jpg",
     "static/media/findFood.png": "/Portfolio/static/media/findFood.9abd4cca85fb669b6297.png",
+    "static/media/NextEvents.png": "/Portfolio/static/media/NextEvents.941fd13a7260e586e494.png",
     "static/media/myimage3.jpg": "/Portfolio/static/media/myimage3.d9485701e5d749ae8fc9.jpg",
     "static/media/Quizz.png": "/Portfolio/static/media/Quizz.4ad4e406cbe49ba12d30.png",
     "static/media/background-10.jpg": "/Portfolio/static/media/background-10.4c78751bc5b6d7330e59.jpg",
@@ -28,10 +29,10 @@
     "static/media/callapp.png": "/Portfolio/static/media/callapp.b873c267c83b36ccb07d.png",
     "index.html": "/Portfolio/index.html",
     "main.aa5f3c83.css.map": "/Portfolio/static/css/main.aa5f3c83.css.map",
-    "main.a0f139d6.js.map": "/Portfolio/static/js/main.a0f139d6.js.map"
+    "main.aec103c4.js.map": "/Portfolio/static/js/main.aec103c4.js.map"
   },
   "entrypoints": [
     "static/css/main.aa5f3c83.css",
-    "static/js/main.a0f139d6.js"
+    "static/js/main.aec103c4.js"
   ]
 }
