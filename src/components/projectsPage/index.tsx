@@ -12,6 +12,7 @@ import FindMeals from "../../assets/images/findFood.png";
 import Callapp from "../../assets/images/callapp.png";
 import Skote from "../../assets/images/skote.png";
 import SentoBar from "../../assets/images/SentoBar.png";
+import NextEvents from "../../assets/images/NextEvents.png";
 
 // ** style imports
 import classes from "./style.module.sass";
@@ -53,6 +54,12 @@ const projects = [
       "Worked closely with other developers, UX designers, PM, QA",
       "Took part in project planning, analyzing tasks, created pixel perfect designs",
     ],
+  },
+  {
+    link: "https://donguzashvili.github.io/Next.js---Events-Project/",
+    picture: NextEvents,
+    title: "Test: NextEvents",
+    description: ["HTML, Css, Javascript, Next.js", "Develop template for learning purposes", "First Next.js project"],
   },
   {
     link: "https://donguzashvili.github.io/ReactQuizz/",
