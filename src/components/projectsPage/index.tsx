@@ -56,7 +56,7 @@ const projects = [
     ],
   },
   {
-    link: "https://donguzashvili.github.io/Next.js---Events-Project/",
+    link: "https://next-js-events-project.vercel.app/",
     picture: NextEvents,
     title: "Test: NextEvents",
     description: ["HTML, Css, Javascript, Next.js", "Develop template for learning purposes", "First Next.js project"],
