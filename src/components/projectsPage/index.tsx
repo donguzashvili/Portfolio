@@ -10,6 +10,10 @@ import PasswordGenerator from "../../assets/images/RandomPassword.png";
 import FoodOrder from "../../assets/images/FoodOrder.png";
 import FindMeals from "../../assets/images/findFood.png";
 import Callapp from "../../assets/images/callapp.png";
+import Skote from "../../assets/images/skote.png";
+import SentoBar from "../../assets/images/SentoBar.png";
+import NextEvents from "../../assets/images/NextEvents.png";
+import NextBlogs from "../../assets/images/NextBlogs.png";
 
 // ** style imports
 import classes from "./style.module.sass";
@@ -53,6 +57,18 @@ const projects = [
     ],
   },
   {
+    link: "https://next-js-events-project.vercel.app/",
+    picture: NextEvents,
+    title: "Test: NextEvents",
+    description: ["HTML, Css, Javascript, Next.js", "Develop template for learning purposes", "First Next.js project"],
+  },
+  {
+    link: "https://nextjs-blog-five-brown-46.vercel.app/",
+    picture: NextBlogs,
+    title: "Test: NextJS Blogs",
+    description: ["HTML, Css, Javascript, Next.js, React Markdown, React Syntax highlighter", "Develop template for learning purposes", "Next.js project"],
+  },
+  {
     link: "https://donguzashvili.github.io/ReactQuizz/",
     picture: Quizz,
     title: "Test: Quizz",
@@ -81,6 +97,18 @@ const projects = [
     picture: Callapp,
     title: "Test: callapp login page",
     description: ["HTML, Css, Javascript", "Develop template for learning purposes"],
+  },
+  {
+    link: "https://donguzashvili.github.io/coding-with-scss/",
+    picture: Skote,
+    title: "Test: Skote",
+    description: ["HTML, Css, Scss", "Develop template for learning purposes", "Everything was built by hand"],
+  },
+  {
+    link: "https://donguzashvili.github.io/Sentobar/",
+    picture: SentoBar,
+    title: "Test: SENTOBAR",
+    description: ["HTML, Css, Bootstrap", "Develop template for learning purposes", "First project"],
   },
 ];
 
