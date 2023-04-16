@@ -63,7 +63,7 @@ const projects = [
     description: ["HTML, Css, Javascript, Next.js", "Develop template for learning purposes", "First Next.js project"],
   },
   {
-    link: "https://next-js-events-project.vercel.app/",
+    link: "https://nextjs-blog-five-brown-46.vercel.app/",
     picture: NextBlogs,
     title: "Test: NextJS Blogs",
     description: ["HTML, Css, Javascript, Next.js, React Markdown, React Syntax highlighter", "Develop template for learning purposes", "Next.js project"],
